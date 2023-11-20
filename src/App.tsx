@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
 import './globals.css'
 import SignInForm from './_auth/forms/SignInForm'
-import { Home } from './_auth/_root/pages'
 import SignUpForm from './_auth/forms/SignUpForm'
 import AuthLayout from './_auth/AuthLayout'
-import RootLayout from './_auth/_root/RootLayout'
-
+import { Toaster } from "@/components/ui/toaster"
+import RootLayout from './_root/RootLayout'
+import { Home } from 'lucide-react'
 export const App = () => {
     return (
         <main className='flex h- screen'>
@@ -20,6 +20,7 @@ export const App = () => {
                     <Route index element={<Home />} />
                 </Route>
             </Routes>
+            <Toaster/>
         </main>
     );
 }
