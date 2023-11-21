@@ -21,7 +21,7 @@ export async function createUserAccount(user: INewUser) {
       imageUrl: avtarUrl,
       username: user.username,
     });
-    if (!newUser) throw Error;
+    if (!newUser) throw Error;  
     return newUser;
   } catch (error) {
     console.log(error);
